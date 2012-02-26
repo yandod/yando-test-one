@@ -1,4 +1,5 @@
 <?php
+date_default_timezone_set('Asia/Tokyo');
 require_once('AppInfo.php');
 require_once('Tankiyo.php');
 
