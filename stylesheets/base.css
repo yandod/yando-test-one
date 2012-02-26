@@ -357,3 +357,28 @@ header .tagline {
 .clearfix {
   zoom: 1;
 }
+
+#get-buddy {
+  background-image: url("../images/samples-bg.png");
+  border-top: 1px solid #353d4f;
+  border-left: 1px solid #353d4f;
+  border-right: 1px solid #353d4f;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, .29);
+  padding: 24px;
+}
+
+#get-buddy p {
+  font-family: "CorbelRegular";
+  font-size: 24px;
+  padding: 8px;
+}
+
+#footer {
+  border-left: 1px solid #b3b3b3;
+  border-right: 1px solid #b3b3b3;
+  border-top: 1px solid #b3b3b3;
+  border-bottom: 1px solid #b3b3b3;
+  padding: 24px 18px;
+  text-align: center
+}
