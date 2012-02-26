@@ -188,7 +188,9 @@ $attendee_data = Tankiyo::getAttendees($party_ids);
 	  <?php endif; ?>
 	  </p>
 	  <?php  if (isset($party_data[$date]) && isset($attendee_data[$party_data[$date]['id']][$basic['id']]) ): ?>
-	  <a href="#" target="_top" class="button">参加中</a>
+	  代表者の人はたん清に電話をして予約を取りましょう！<br/>
+	  <a href="#" class="button">予約が取れた！</a>
+	  <a href="#" class="button">満席ェ・・・</a>
 	  <?php  elseif (isset($party_data[$date])): ?>
       <a href="./join.php?party_id=<?php echo $party_data[$date]['id'];?>" target="_top" class="button">参加する</a>
 	  <?php else: ?>
