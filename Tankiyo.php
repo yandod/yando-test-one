@@ -87,6 +87,17 @@ class Tankiyo {
 		);
 	}
 
+	public static function leaveParty($user_id,$party_id) {
+		$dbh = self::getConnection();
+		return $dbh->query(
+			sprintf(
+				'DELETE FROM attendees WHERE party_id = %s AND user_id = %s',
+				$dbh->quote($party_id),
+				$dbh->quote($user_id)
+			)
+		);
+	}
+
 	public static function getAttendees($party_ids) {
 		$dbh = self::getConnection();
 		$data = array();

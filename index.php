@@ -192,6 +192,7 @@ $dates = Tankiyo::getDates();
 	  代表者の人はたん清に電話をして予約を取りましょう！<br/>
 	  <a href="#" class="button">予約が取れた！</a>
 	  <a href="#" class="button">満席ェ・・・</a>
+	  <a href="leave.php?party_id=<?php echo $party_data[$date]['id'];?>" class="button">参加を取り消す</a>
 	  <?php  elseif (isset($party_data[$date])): ?>
       <a href="./join.php?party_id=<?php echo $party_data[$date]['id'];?>" target="_top" class="button">参加する</a>
 	  <?php else: ?>
@@ -201,7 +202,7 @@ $dates = Tankiyo::getDates();
   <?php	endforeach;?>
 
     <section id="footer" class="clearfix">
-		ソーシャルたん清は非公認の勝手ソーシャルアプリです<br/>
+		ソーシャルたん清は非公認の勝手ソーシャルアプリです(テスト中です)<br/>
 		<a href="http://www.tankiyo.com/" target="_blank"><img src="./images/logo.gif"></a>		
     </section>
   </body>
