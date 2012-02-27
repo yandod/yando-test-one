@@ -7,6 +7,7 @@ foreach ($party_data as $row) {
 	$party_ids[] = $row['id'];
 }
 $attendee_data = Tankiyo::getAttendees($party_ids);
+$dates = Tankiyo::getDates();
 ?>
 <!DOCTYPE html>
 <html xmlns:fb="http://ogp.me/ns/fb#" lang="en">
@@ -183,7 +184,7 @@ $attendee_data = Tankiyo::getAttendees($party_ids);
 	  <p>
 	  <?php  if (isset($party_data[$date]) && isset($attendee_data[$party_data[$date]['id']])): ?>
 		  <?php foreach ($attendee_data[$party_data[$date]['id']] as $attend): ?>
-			 <img src="http://graph.facebook.com/<?php echo $attend['user_id']?>/picture" width="50" height="50"/>
+			 <img src="http://graph.facebook.com/<?php echo $attend['user_id']?>/picture" alt="<?php echo $attend['name']?>" width="50" height="50"/>
 		  <?php endforeach; ?>
 	  <?php endif; ?>
 	  </p>
