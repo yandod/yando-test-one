@@ -188,7 +188,9 @@ $dates = Tankiyo::getDates();
 		  <?php endforeach; ?>
 	  <?php endif; ?>
 	  </p>
-	  <?php  if (isset($party_data[$date]) && isset($attendee_data[$party_data[$date]['id']][$basic['id']]) ): ?>
+	  <?php if (!isset($basic['id']): ?>
+	  <div class="fb-login-button" data-scope="user_likes,user_photos"></div>
+	  <?php  elseif (isset($party_data[$date]) && isset($attendee_data[$party_data[$date]['id']][$basic['id']]) ): ?>
 	  代表者の人はたん清に電話をして予約を取りましょう！<br/>
 	  <a href="#" class="button">予約が取れた！</a>
 	  <a href="#" class="button">満席ェ・・・</a>
